@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="ai.trully.sdk.testnavigationimplementation.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_trullySdkFragment"
+            app:destination="@id/trullySdkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trullySdkFragment"
+        android:name="ai.trully.sdk.testnavigationimplementation.fragments.TrullySdkFragment"
+        android:label="fragment_trully_sdk"
+        tools:layout="@layout/fragment_trully_sdk" >
+        <action
+            android:id="@+id/action_trullySdkFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="ai.trully.sdk.testnavigationimplementation.fragments.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" />
+</navigation>
